@@ -6,3 +6,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
