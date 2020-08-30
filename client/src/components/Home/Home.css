@@ -1,53 +1,112 @@
+/* 
+.outer-container{
+    background-color: rgb(241, 240, 240);
+    border: 1px solid black;
+}
 
 .home{
     height: 100vh;
-    position: relative;
-    border: 4px solid rgb(165, 21, 105);
+
+
+}
+
+.home-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    height: 93vh;
 }
 
 .home-container{
-    border: 2px solid rgb(29, 31, 184);
+    
+    width: 900px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.home-flex-container{
     padding:20px;
-    display: flex;
+    border: 1px solid rgb(29, 31, 184);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.home-header{
+    padding:20px;
+    width: 100%;
+}
+
+
+
+
+
+
+.home-header h1{
+    text-align: center;
+
+}
+
+.home-inner-container{
+    padding: 15px;
 }
 
 .home-left{
 
     border: 1px solid rgb(42, 184, 29);
-    height: 600px;
-    width: 500px;
+    width: 100%;
     margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    margin: 10px 30px;
 
 }
 
 .home-left img{
     width: 100%;
-    height: 300px;
+    height: 200px;
 }
 
-.home-left h1{
+.home-trivia-type-header{
     margin: 15px 0px;
 }
 
-.home-left p{
+.home-trivia-description{
 
     margin: 10px 0px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 25px;
 
 }
 
+.home-input-div{
+    margin-top: 10px;
+    text-align: center;
+    position: relative;
+}
+
 .home-inputs{
     height: 35px;
-    width: 60%;
-    padding-left: 10px;
+    width: 300px;
+    padding-left: 35px;
     border:none;
-    border-bottom: 2px solid rgb(190, 188, 188);
+    border-bottom: 1px solid rgb(97, 97, 97);
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.input-icon{
+    position: absolute;
+    top:17px;
+    margin-left: 10px;
+    color: rgb(97, 97, 97);
+}
+
+.btn-div{
+    text-align: center;
 }
 
 .home-btn{
@@ -57,21 +116,42 @@
     border: none;
     background-color: rgb(53, 52, 52);
     color: white;
-    margin: 20px 0px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
 }
 
+.home-btn:hover{
+    background-color: rgb(88, 87, 87);
+}
 
-
-
-
+.home-btn i{
+    margin-left: 10px;
+}
 
 
 
 .home-right{
     border: 1px solid rgb(156, 167, 12);
-    height: 600px;
-    width: 400px;
-    margin: 10px;
+    width: 100%;
+    margin: 10px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 
 }
 
+.home-right img{
+    width: 100%;
+    height: 200px;
+}
+
+
+@media only screen and (max-width: 960px){
+
+
+    .home-flex-container{
+        padding:20px;
+        display: block;
+        border: 1px solid rgb(29, 31, 184);
+
+    }
+} */
