@@ -1,10 +1,20 @@
 import React from 'react'
 import './Room.css'
-// import roomBG from '../../assets/room_bg.jpg'
+import axios from 'axios';
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import countDownTimer from '../countDownTimer/countDownTimer'
 
+
 const Room = () => {
+
+    axios
+    .get(
+      'https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=multiple'
+    )
+    .then((response) => {
+      console.log(response.data.results[0]);
+    });
+
     return (
         <div className='room'>
 

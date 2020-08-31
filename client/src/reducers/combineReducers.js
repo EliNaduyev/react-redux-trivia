@@ -1,8 +1,11 @@
-import nameReducer from './name'
-import { combineReducers } from 'redux'
+import nameReducer from './name';
+import typeReducer from './type';
+
+import { combineReducers } from 'redux';
 
 const allReducers = combineReducers({
-    name:nameReducer
-})
+  name: nameReducer,
+  type: typeReducer,
+});
 
-export default allReducers
+export default allReducers;
