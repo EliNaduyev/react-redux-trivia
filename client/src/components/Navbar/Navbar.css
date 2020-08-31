@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     padding-left: 40px;
-    border-bottom: 2px solid rgb(224, 224, 2);
+    border-bottom: 3px solid rgb(21, 172, 172);
     position: fixed;
     width: 100%;
     z-index: 99;
