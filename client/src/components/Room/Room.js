@@ -4,7 +4,7 @@ import axios from 'axios';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 import countDownTimer from '../countDownTimer/countDownTimer';
 
-const Room = () => {
+const Room = (props) => {
   //the set of all questions
   const [questionsSet, setQuestionsSet] = useState([]);
   //question number
@@ -37,12 +37,16 @@ const Room = () => {
   const getQuetion = () => {
     const a = document.querySelector('#a');
     a.style.background = 'rgb(231, 231, 231)';
+    a.style.color = 'black'
     const b = document.querySelector('#b');
     b.style.background = 'rgb(231, 231, 231)';
+    b.style.color = 'black'
     const c = document.querySelector('#c');
     c.style.background = 'rgb(231, 231, 231)';
+    c.style.color = 'black'
     const d = document.querySelector('#d');
     d.style.background = 'rgb(231, 231, 231)';
+    d.style.color = 'black'
     setCurrentQuestion(questionsSet[questionNumber]);
     let arr = questionsSet[questionNumber].incorrect_answers;
     arr.push(questionsSet[questionNumber].correct_answer);
@@ -57,9 +61,11 @@ const Room = () => {
     if (ans === currentQuestion.correct_answer) {
       setScore(score + 5);
       playAudio('https://www.youtube.com/watch?v=0ZQ-Lk--ILE');
-      answer.style.background = 'green';
+      answer.style.background = 'rgb(99, 190, 99)';
+      answer.style.color = 'white'
     } else {
-      answer.style.background = 'red';
+      answer.style.background = 'rgb(207, 75, 75)';
+      answer.style.color = 'white'
       let tmp;
       for (let i = 0; i < possibleAnswers.length; i++) {
         if (currentQuestion.correct_answer === possibleAnswers[i]) {
@@ -71,19 +77,24 @@ const Room = () => {
       switch (tmp) {
         case 0:
           const a = document.querySelector('#a');
-          a.style.background = 'green';
+          a.style.background = 'rgb(99, 190, 99)';
+          a.style.color = 'white'
           break;
         case 1:
           const b = document.querySelector('#b');
-          b.style.background = 'green';
+          b.style.background = 'rgb(99, 190, 99)';
+          b.style.color = 'white'
           break;
         case 2:
           const c = document.querySelector('#c');
-          c.style.background = 'green';
+          c.style.background = 'rgb(99, 190, 99)';
+          c.style.color = 'white'
+
           break;
         case 3:
           const d = document.querySelector('#d');
-          d.style.background = 'green';
+          d.style.background = 'rgb(99, 190, 99)';
+          d.style.color = 'white'
           break;
         default:
           break;
@@ -113,6 +124,8 @@ const Room = () => {
 
   const endGame = () => {
     console.log('endGame');
+    props.history.push('/results')
+
   };
 
   function playAudio(url) {
@@ -183,9 +196,9 @@ const Room = () => {
               }}
             >
               <div className='number-of-ans'>a</div>
-              <label
-                dangerouslySetInnerHTML={{ __html: possibleAnswers[0] }}
-              ></label>
+              <label dangerouslySetInnerHTML={{ __html: possibleAnswers[0] }}>
+
+              </label>
             </div>
             <div
               className='ans-box center'
@@ -234,7 +247,7 @@ const Room = () => {
                         </button>
                 </div> */}
         <div className='exit-game-btn-div center'>
-          <button className='exit-game-btn center'>
+          <button className='exit-game-btn center' onClick={()=> props.history.push('/')}>
             <span>Exit Game</span>
             <i class='fa fa-sign-out' aria-hidden='true'></i>
           </button>

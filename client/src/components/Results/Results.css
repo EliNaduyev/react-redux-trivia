@@ -113,9 +113,10 @@
 }
 
 .results-box-underline{
-    border: 2px solid green;
+    border: 2px solid rgb(21, 172, 172);
     border-radius: 10px;
     width: 300px;
+    margin: 10px auto;
 }
 
 .results-box h1{
@@ -216,5 +217,13 @@
         height: 140px;
         width: 140px;
     }
+}
+
+
+
+
+.d{
+    color: rgb(99, 190, 99);
+    color: rgb(207, 75, 75);
 }
 
